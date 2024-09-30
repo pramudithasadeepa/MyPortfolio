@@ -1,12 +1,11 @@
 import React from "react";
 import MYImage from "../assets/myphoto1.png.png";
-import { TypeAnimation } from "react-type-animation"; // Make sure this is the correct library you're using
+import { TypeAnimation } from "react-type-animation";
 import "../components/Intro.css";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Intro = () => {
   const handleViewCV = () => {
-    // Replace 'YOUR_CV_LINK' with the actual link to your CV
     window.open(
       "https://drive.google.com/file/d/1mfza9lVum2zmz0tpIiDnCNAofYGBivED/view?usp=drive_link",
       "_blank"
