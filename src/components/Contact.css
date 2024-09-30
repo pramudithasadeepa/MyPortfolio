@@ -1,6 +1,6 @@
 .custom-alert {
-  border: 2px solid white; /* Green border */
-  background-color: #424242; /* Green background */
-  color: white; /* White font color */
-  font-size: 15px; /* Smaller font size */
+  border: 2px solid white;
+  background-color: #424242;
+  color: white;
+  font-size: 15px;
 }

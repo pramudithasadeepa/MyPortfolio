@@ -28,7 +28,7 @@ export default function Contact() {
             showConfirmButton: false,
             timer: 2000,
             customClass: {
-              popup: "custom-alert", // Add your custom class here
+              popup: "custom-alert", //custom class here
             },
           });
           setTimeout(() => {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import mylogo from "../assets/twlogo.png";
 
-// Main Navbar Component
+
 export default function Navbar({
   introRef,
   aboutRef,
@@ -10,7 +10,6 @@ export default function Navbar({
   contactRef,
 }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  // Custom smooth scroll function
   const smoothScrollTo = (targetY, duration = 1000) => {
     const startY = window.pageYOffset;
     const difference = targetY - startY;
@@ -43,11 +42,9 @@ export default function Navbar({
 
   return (
     <div>
-      {/* Fixed Navbar */}
       <nav className="bg-gray-800 fixed top-0 left-0 w-full z-50 shadow-lg">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
-            {/* Logo */}
             <div className="flex items-center">
               <div className="w-12 h-12 mr-5 md:hidden lg:block">
                 <img src={mylogo} />
@@ -55,7 +52,7 @@ export default function Navbar({
               <div className="text-white text-2xl font-bold">Pramuditha</div>
             </div>
 
-            {/* Centered Nav Items (Hidden on mobile) */}
+
             <div className="hidden sm:flex flex-grow justify-center space-x-4">
               <button
                 onClick={() => handleScroll(introRef)}
@@ -88,8 +85,6 @@ export default function Navbar({
                 Contact
               </button>
             </div>
-
-            {/* Connect Button (Hidden on small screens) */}
             <div>
               <button
                 onClick={() => handleScroll(contactRef)}
@@ -99,7 +94,7 @@ export default function Navbar({
               </button>
             </div>
 
-            {/* Mobile Menu Button */}
+        
             <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -107,16 +102,16 @@ export default function Navbar({
               >
                 <span className="sr-only">Open main menu</span>
                 {mobileMenuOpen ? (
-                  <span>&#x2715;</span> // Close icon (X)
+                  <span>&#x2715;</span> 
                 ) : (
-                  <span>&#9776;</span> // Menu icon (Bars)
+                  <span>&#9776;</span>
                 )}
               </button>
             </div>
           </div>
         </div>
 
-        {/* Mobile Menu */}
+  
         {mobileMenuOpen && (
           <div className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
@@ -154,9 +149,7 @@ export default function Navbar({
           </div>
         )}
       </nav>
-      {/* Add some padding to the top of your main content to avoid being hidden behind the fixed navbar */}
       <div className="pt-16"></div>{" "}
-      {/* Adjust this value based on the navbar height */}
     </div>
   );
 }
