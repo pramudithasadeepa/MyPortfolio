@@ -10,14 +10,13 @@ export default function About() {
         <div className='flex flex-col md:flex-row items-center md:space-x-12'>
             <div className='flex-1'>
             <p className='text-lg'>
-              I am an IT undergraduate at the University of Moratuwa.
-              I am a passionate full-stack developer with a focus on building
-              modern and responsive web applications. With a strong foundation
-              in both frontend and backend technologies.I have experience with 
-              Java, Python, JavaScript, React.js, Node.js and Express.js as well as database 
-              management.I interest solving problems.I am a team player 
-              I have time management skills,
-              and I am always to learn and take on new challenges.
+            I am an IT undergraduate at the University of Moratuwa, with a passion for full-stack 
+            development and a focus on building modern, responsive web applications. My technical 
+            expertise spans both frontend and backend technologies, with hands-on experience in 
+            Java, Python, JavaScript, React.js, Node.js, and Express.js, along with database management
+             skills. I thrive in problem-solving environments and excel as a collaborative team player.
+             With strong time management skills, I am always eager to learn, adapt, and take on new 
+             challenges to continuously improve my skills.
             </p>
             </div>
         </div>
