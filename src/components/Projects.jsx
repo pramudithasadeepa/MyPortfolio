@@ -1,6 +1,8 @@
 import React from "react";
 import project1 from "../assets/project1.jpeg";
 import project2 from "../assets/project2.jpg";
+import portimage from "../assets/portimage.png";
+import {FaGithub} from "react-icons/fa";
 
 const projects = [
   {
@@ -13,7 +15,9 @@ const projects = [
     technologies: "React,Node,Express,MysQL",
     imagewidth: "100%",
     imageHeight: "200px",
-    // github: "https://github.com/Courier-Service-Project",
+    gname:"Github LInk :",
+    gicon:<FaGithub />,
+    github: "https://github.com/Courier-Service-Project",
   },
   {
     id: 2,
@@ -25,6 +29,8 @@ const projects = [
     technologies: "Arduino",
     imagewidth: "100%",
     imageHeight: "200px",
+    gname:"",
+    github: "",
   },
   {
     id: 3,
@@ -32,10 +38,13 @@ const projects = [
     discription: "",
     description2:
       "I built my portfolio website using React for the frontend, Tailwind CSS for styling, and Nodemailer to handle email functionality, providing a clean and responsive design with seamless communication capabilities.",
-    image: project1,
+    image: portimage,
     technologies: "React,tailwingcss,NodeMailer",
     imagewidth: "100%",
     imageHeight: "200px",
+    gname:"Github LInk :",
+    gicon:<FaGithub />,
+    github: "https://github.com/pramudithasadeepa/MyPortfolio",
   },
 ];
 
@@ -43,9 +52,9 @@ export default function Projects() {
   return (
     <div className="bg-black text-white py-20" id="project">
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
-      <div className="text-4xl font-bold text-center mb-12">
-         <span className="border-b-4 border-white">Projects</span>
-      </div>
+        <div className="text-4xl font-bold text-center mb-12">
+          <span className="border-b-4 border-white">Projects</span>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 ">
           {projects.map((project) => (
             <div
@@ -73,16 +82,29 @@ export default function Projects() {
                 Description :{" "}
                 <span className="text-gray-400">{project.description2}</span>
               </p>
-              <p className="text-gray-100">
+              <p className="text-gray-100 mb-4">
                 Technologies : <br />
                 <div className="text-white rounded p-2 border-b-4 border-2 border-green-500 inline-block mt-3">
-                      {project.technologies}
-                  </div>
-
+                  {project.technologies}
+                </div>
               </p>
               {/* <a href={project.github} className="inline-block bg-gradient-to-r 
             from-green-400 to-blue-500 text-white px-4 py-2 rounded-full" target="_blank" 
             rel="noopener noreferrer">GitHub</a> */}
+          <p className="text-gray-100">
+                {project.gname} <br />
+              </p>
+            <div className="pt-4">
+            <a
+              href={project.github}
+              className="text-gray-400 hover:text-white"
+            >
+              <span className="text-3xl">
+                {" "}
+                {project.gicon}
+              </span>
+            </a>
+                </div>
             </div>
           ))}
         </div>
